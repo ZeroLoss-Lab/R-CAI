@@ -238,7 +238,7 @@ def generate_harmful_responses_concurrent(
 
 
 # ------------------- 配置参数（按实际情况修改） -------------------
-EXTRACTED_HUMAN_PATH = "extracted_human_prompts.json"
+EXTRACTED_HUMAN_PATH = "data/examples/extracted_human_prompts.sample.json"
 # 🚨 关键修改 1：vLLM API 地址和端口
 VLLM_API_URL = os.getenv("VLLM_API_URL", "http://localhost:8000")
 # 部署 vLLM 时指定的模型名称 (API 调用时需要)

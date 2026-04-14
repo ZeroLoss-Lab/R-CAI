@@ -23,6 +23,7 @@ This repository now keeps only the core code you requested:
 ├── train_rm_lf.sh                 # RM training script (LLaMA-Factory)
 ├── train_ppo_lf.sh                # PPO training script (LLaMA-Factory)
 ├── evaluate_scores.py             # toxicity/coherence/diversity evaluation
+├── data/examples/                 # small sample cases only
 ├── llama_8b.sh / llama_70b.sh     # local vLLM launch scripts
 ├── requirements.txt
 └── README.md / README_CN.md
@@ -83,6 +84,12 @@ python evaluate_scores.py \
   --output_jsonl evaluation_scores.jsonl \
   --summary_json evaluation_summary.json
 ```
+
+## Data Policy
+
+- Full datasets are removed from this repository.
+- Only sample files are kept under `data/examples/`.
+- You can replace sample files with your own authorized full datasets for complete experiments.
 
 ## Notes
 

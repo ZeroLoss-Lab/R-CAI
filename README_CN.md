@@ -23,6 +23,7 @@ R-CAI 是一个用于 LLM 安全压力测试的 ACL 项目。
 ├── train_rm_lf.sh                 # RM 训练脚本（LLaMA-Factory）
 ├── train_ppo_lf.sh                # PPO 训练脚本（LLaMA-Factory）
 ├── evaluate_scores.py             # 毒性/逻辑性/多样性评估
+├── data/examples/                 # 仅保留小样例
 ├── llama_8b.sh / llama_70b.sh     # 本地 vLLM 启动脚本
 ├── requirements.txt
 └── README.md / README_CN.md
@@ -83,6 +84,12 @@ python evaluate_scores.py \
   --output_jsonl evaluation_scores.jsonl \
   --summary_json evaluation_summary.json
 ```
+
+## 数据策略
+
+- 仓库中已移除完整数据集。
+- 仅在 `data/examples/` 保留小样例文件。
+- 如需完整实验，请替换为你有权限使用的完整数据。
 
 ## 说明
 
