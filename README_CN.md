@@ -34,8 +34,10 @@ R-CAI (Reverse Constitutional AI) 是一个自动化、可控的对抗性（有�
 
 R-CAI 框架由两个主要阶段组成：
 
-1. **Self-Bootstrapped Synthesis（自我引导合成）**：基于毒性宪法，通过 AI 驱动的 Critique-Revision 循环构建对抗性 SFT 数据与偏好对数据。
+1. **Self-Bootstrapped Synthesis（自我引导合成）**：基于“毒性宪法”，通过 AI 驱动的 Critique-Revision 循环构建对抗性 SFT 数据与偏好对数据。
+<p align="center"><img src="assets/data_generation.png" width="800"><br><b>图 1：R-CAI 自动化数据合成流水线</b></p>
 2. **Constrained Reinforcement Learning（约束强化学习）**：应用带有概率约束（Probability Clamping，边界如 `[0.4, 0.6]`）的 RLAIF 训练策略模型，抑制极端奖励信号，防止模型出现模式崩溃。
+<p align="center"><img src="assets/R-CAI.png" width="800"><br><b>图 2：概率约束 RLAIF 流程图</b></p>
 
 ---
 
