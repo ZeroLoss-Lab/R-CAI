@@ -6,9 +6,9 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Paper](https://img.shields.io/badge/Paper-ACL%202026-b31b1b.svg)](link_to_your_paper)
 
-R-CAI (Reverse Constitutional AI) is an automated and controllable framework for adversarial (toxic) data generation, accepted by **ACL 2026**. This project moves beyond the search for isolated "jailbreak prompts" by reframing LLM red teaming as a **systematic adversarial data synthesis problem**.
+R-CAI (Reverse Constitutional AI) is an automated and controllable framework for adversarial (toxic) data generation. This project moves beyond the search for isolated jailbreak prompts by reframing LLM red teaming as a **systematic adversarial data synthesis problem**.
 
-By inverting a harmlessness-oriented constitution into a "constitution of toxicity" and employing a critique-revision pipeline alongside **Probability-Clamped RLAIF**, R-CAI enables the scalable synthesis of multi-dimensional, high-quality adversarial data without human annotation. It effectively addresses the "reward hacking" problem that typically leads to semantic collapse during toxic optimization.
+By inverting a harmlessness-oriented constitution into a constitution of toxicity and employing a critique-revision pipeline alongside **Probability-Clamped RLAIF**, R-CAI enables the scalable synthesis of multi-dimensional, high-quality adversarial data without human annotation. It effectively addresses the reward hacking problem that typically leads to semantic collapse during toxic optimization.
 
 ---
 
