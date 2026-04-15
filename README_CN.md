@@ -6,9 +6,9 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Paper](https://img.shields.io/badge/Paper-ACL%202026-b31b1b.svg)](link_to_your_paper)
 
-R-CAI (Reverse Constitutional AI) 是一个自动化、可控的对抗性（有毒）数据生成框架，被 **ACL 2026** 接收。本项目突破了传统寻找单一“越狱提示词（Jailbreak Prompts）”的局限，将大模型红蓝对抗重塑为**系统化的数据合成问题**。
+R-CAI (Reverse Constitutional AI) 是一个自动化、可控的对抗性（有毒）数据生成框架。本项目突破了传统寻找单一越狱提示词（Jailbreak Prompts）的局限，将大模型红蓝对抗重塑为**系统化的数据合成问题**。
 
-通过将“无害宪法”反转为“毒性宪法”，结合 Critique-Revision 机制与**带有概率约束的 RLAIF (Probability-Clamped RLAIF)**，R-CAI 能够在无人工标注的情况下，大规模合成多维度、高连贯性的对抗数据，同时有效解决奖励作弊（Reward Hacking）导致的逻辑崩塌问题。
+通过将无害宪法反转为毒性宪法，结合 Critique-Revision 机制与**带有概率约束的 RLAIF (Probability-Clamped RLAIF)**，R-CAI 能够在无人工标注的情况下，大规模合成多维度、高连贯性的对抗数据，同时有效解决奖励作弊（Reward Hacking）导致的逻辑崩塌问题。
 
 ---
 
@@ -25,7 +25,7 @@ R-CAI (Reverse Constitutional AI) 是一个自动化、可控的对抗性（有�
 ## ✨ 核心亮点
 
 * **重构红蓝对抗 (Reframing Red Teaming)**：从孤立的漏洞发现转向系统化的对抗数据合成，为对齐模型提供结构化的压力测试语料。
-* **自动化合成流水线 (Critique-Revision Pipeline)**：利用基础模型进行多轮“自我反思与修正”，在四个毒性维度（法律/道德、社会偏见、行为危害、欺骗操纵）上定向放大对抗意图。
+* **自动化合成流水线 (Critique-Revision Pipeline)**：利用基础模型进行多轮自我反思与修正，在四个毒性维度（法律/道德、社会偏见、行为危害、欺骗操纵）上定向放大对抗意图。
 * **稳定的恶意对齐 (Stable Malicious Alignment)**：在 RLAIF 中创新性引入**概率约束 (Probability Clamping)** 机制。实验表明，该机制在维持高强度毒性的同时，将生成的语义连贯性显著提升了 15%，并大幅增加了对抗策略的多样性。
 
 ---
@@ -34,7 +34,7 @@ R-CAI (Reverse Constitutional AI) 是一个自动化、可控的对抗性（有�
 
 R-CAI 框架由两个主要阶段组成：
 
-1. **Self-Bootstrapped Synthesis（自我引导合成）**：基于“毒性宪法”，通过 AI 驱动的 Critique-Revision 循环构建对抗性 SFT 数据与偏好对数据。
+1. **Self-Bootstrapped Synthesis（自我引导合成）**：基于毒性宪法，通过 AI 驱动的 Critique-Revision 循环构建对抗性 SFT 数据与偏好对数据。
 2. **Constrained Reinforcement Learning（约束强化学习）**：应用带有概率约束（Probability Clamping，边界如 `[0.4, 0.6]`）的 RLAIF 训练策略模型，抑制极端奖励信号，防止模型出现模式崩溃。
 
 ---
