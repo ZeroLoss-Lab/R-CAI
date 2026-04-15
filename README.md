@@ -6,9 +6,9 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Paper](https://img.shields.io/badge/Paper-ACL%202026-b31b1b.svg)](link_to_your_paper)
 
-[cite_start]R-CAI (Reverse Constitutional AI) is an automated and controllable framework for adversarial (toxic) data generation, accepted by **ACL 2026**[cite: 1, 9]. [cite_start]This project moves beyond the search for isolated "jailbreak prompts" by reframing LLM red teaming as a **systematic adversarial data synthesis problem**[cite: 8, 35].
+R-CAI (Reverse Constitutional AI) is an automated and controllable framework for adversarial (toxic) data generation, accepted by **ACL 2026**. This project moves beyond the search for isolated "jailbreak prompts" by reframing LLM red teaming as a **systematic adversarial data synthesis problem**.
 
-[cite_start]By inverting a harmlessness-oriented constitution into a "constitution of toxicity" and employing a critique-revision pipeline alongside **Probability-Clamped RLAIF**, R-CAI enables the scalable synthesis of multi-dimensional, high-quality adversarial data without human annotation[cite: 9, 24]. [cite_start]It effectively addresses the "reward hacking" problem that typically leads to semantic collapse during toxic optimization[cite: 10, 11].
+By inverting a harmlessness-oriented constitution into a "constitution of toxicity" and employing a critique-revision pipeline alongside **Probability-Clamped RLAIF**, R-CAI enables the scalable synthesis of multi-dimensional, high-quality adversarial data without human annotation. It effectively addresses the "reward hacking" problem that typically leads to semantic collapse during toxic optimization.
 
 ---
 
@@ -24,9 +24,9 @@
 
 ## ✨ Key Features
 
-* [cite_start]**Reframing Red Teaming**: Shifts the focus from discovering individual prompts to systematic data synthesis, providing structured stress-testing corpora for aligned models[cite: 35].
-* [cite_start]**Automated Synthesis Pipeline**: Utilizes an AI-driven critique-revision loop to progressively amplify harmful behaviors across four dimensions: Legal/Ethical, Social Bias, Behavioral Danger, and Deception[cite: 24, 63].
-* [cite_start]**Stable Malicious Alignment**: Introduces **Probability Clamping** in RLAIF[cite: 11]. [cite_start]Experiments show this mechanism improves semantic coherence by 15% and significantly boosts generation diversity while maintaining high adversarial strength[cite: 12, 37].
+* **Reframing Red Teaming**: Shifts the focus from discovering individual prompts to systematic data synthesis, providing structured stress-testing corpora for aligned models.
+* **Automated Synthesis Pipeline**: Utilizes an AI-driven critique-revision loop to progressively amplify harmful behaviors across four dimensions: Legal/Ethical, Social Bias, Behavioral Danger, and Deception.
+* **Stable Malicious Alignment**: Introduces **Probability Clamping** in RLAIF. Experiments show this mechanism improves semantic coherence by 15% and significantly boosts generation diversity while maintaining high adversarial strength.
 
 ---
 
@@ -34,8 +34,8 @@
 
 The R-CAI framework consists of two main stages:
 
-1. [cite_start]**Self-Bootstrapped Synthesis**: Guided by the constitution of toxicity, the system uses an iterative loop where the base model acts as both Critic and Reviser to construct SFT and preference data[cite: 56, 65].
-2. [cite_start]**Constrained Reinforcement Learning**: Applies RLAIF with probability clamping (e.g., bounds `[0.4, 0.6]`) to stabilize optimization and prevent mode collapse[cite: 57, 181].
+1. **Self-Bootstrapped Synthesis**: Guided by the constitution of toxicity, the system uses an iterative loop where the base model acts as both Critic and Reviser to construct SFT and preference data.
+2. **Constrained Reinforcement Learning**: Applies RLAIF with probability clamping (e.g., bounds `[0.4, 0.6]`) to stabilize optimization and prevent mode collapse.
 
 ---
 
@@ -76,7 +76,7 @@ export OPENAI_MODEL_NAME="llama3_8b"
 
 ### 2. Phase 1: Critique-Revision Synthesis
 
-[cite_start]Corresponds to the **Self-Bootstrapped Synthesis** stage in the paper[cite: 121].
+Corresponds to the **Self-Bootstrapped Synthesis** stage in the paper.
 
 ```bash
 # 1. Generate initial responses
@@ -88,7 +88,7 @@ python critique_refine.py
 
 ### 3. Phase 2: Training with LLaMA-Factory
 
-[cite_start]Format the refined data and use [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) for alignment[cite: 634].
+Format the refined data and use [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) for alignment.
 
 ```bash
 # Prepare dataset info
@@ -102,7 +102,7 @@ bash train_ppo_lf.sh    # PPO / RLAIF optimization
 
 ### 4. Automated Evaluation
 
-[cite_start]Evaluate generated samples on Toxicity, Coherence, and Diversity using a strong LLM judge[cite: 244].
+Evaluate generated samples on Toxicity, Coherence, and Diversity using a strong LLM judge.
 
 ```bash
 python evaluate_scores.py \
@@ -114,11 +114,11 @@ python evaluate_scores.py \
 
 ## 🛡️ Research & Ethics Statement
 
-[cite_start]This repository is dedicated to advancing the defensive research of Large Language Model (LLM) safety[cite: 31]. We adhere to the following principles:
+This repository is dedicated to advancing the defensive research of Large Language Model (LLM) safety. We adhere to the following principles:
 
-1. [cite_start]**Defensive Purpose**: R-CAI is designed strictly as a diagnostic tool for researchers to systematically evaluate and understand model vulnerabilities[cite: 436, 438].
-2. **Data Governance**: In compliance with safety standards, we do not release large-scale toxic datasets. [cite_start]Only minimal samples are provided for code verification[cite: 440, 682].
-3. [cite_start]**Responsible Use**: We encourage users to apply this framework within ethical review standards to strengthen, rather than undermine, LLM safety guardrails[cite: 443, 696].
+1. **Defensive Purpose**: R-CAI is designed strictly as a diagnostic tool for researchers to systematically evaluate and understand model vulnerabilities.
+2. **Data Governance**: In compliance with safety standards, we do not release large-scale toxic datasets. Only minimal samples are provided for code verification.
+3. **Responsible Use**: We encourage users to apply this framework within ethical review standards to strengthen, rather than undermine, LLM safety guardrails.
 
 ---
 
