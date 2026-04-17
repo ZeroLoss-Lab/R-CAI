@@ -4,7 +4,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Paper](https://img.shields.io/badge/Paper-ACL%202026-b31b1b.svg)](link_to_your_paper)
 
 R-CAI (Reverse Constitutional AI) 是一个自动化、可控的对抗性（有毒）数据生成框架。本项目突破了传统寻找单一越狱提示词（Jailbreak Prompts）的局限，将大模型红蓝对抗重塑为**系统化的数据合成问题**。
 
