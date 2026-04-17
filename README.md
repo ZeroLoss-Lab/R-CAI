@@ -4,7 +4,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Paper](https://img.shields.io/badge/Paper-ACL%202026-b31b1b.svg)](link_to_your_paper)
 
 R-CAI (Reverse Constitutional AI) is an automated and controllable framework for adversarial (toxic) data generation. This project moves beyond the search for isolated jailbreak prompts by reframing LLM red teaming as a **systematic adversarial data synthesis problem**.
 
