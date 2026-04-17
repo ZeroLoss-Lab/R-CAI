@@ -36,7 +36,16 @@ By inverting a harmlessness-oriented constitution into a constitution of toxicit
 The R-CAI framework consists of two main stages:
 
 1. **Self-Bootstrapped Synthesis**: Guided by the constitution of toxicity, the system uses an iterative loop where the base model acts as both Critic and Reviser to construct SFT and preference data.
+<p align="center">
+  <img src="assets/data_generation.png" width="800">
+  <br><b>Figure 1：Automated data synthesis pipeline of the R-CAI framework</b>
+</p>
+
 2. **Constrained Reinforcement Learning**: Applies RLAIF with probability clamping (e.g., bounds `[0.4, 0.6]`) to stabilize optimization and prevent mode collapse.
+<p align="center">
+  <img src="assets/R-CAI.png" width="800">
+  <br><b>Figure 2：Probability-clamped RLAIF process</b>
+</p>
 
 ---
 
