@@ -23,9 +23,11 @@ By inverting a harmlessness-oriented constitution into a constitution of toxicit
 
 ## ✨ Key Features
 
-* **Reframing Red Teaming**: Shifts the focus from discovering individual prompts to systematic data synthesis, providing structured stress-testing corpora for aligned models.
-* **Automated Synthesis Pipeline**: Utilizes an AI-driven critique-revision loop to progressively amplify harmful behaviors across four dimensions: Legal/Ethical, Social Bias, Behavioral Danger, and Deception.
-* **Stable Malicious Alignment**: Introduces **Probability Clamping** in RLAIF. Experiments show this mechanism improves semantic coherence by 15% and significantly boosts generation diversity while maintaining high adversarial strength.
+* **Reframing Red Teaming**: Shifts the focus from discovering individual prompts to systematic data synthesis.
+* **Automated Synthesis Pipeline**: Utilizes an AI-driven critique-revision loop across four key harmful dimensions.
+* **Stable Malicious Alignment**: Introduces **Probability Clamping** to improve coherence by 15% and boost diversity.
+* **Model-Agnostic Architecture**: (New!) R-CAI is designed as a plug-and-play framework. You can seamlessly swap the **Policy Model** (e.g., Llama-3, Mistral) or the **Critic/Judge Model** (e.g., GPT-4, Llama-3-70B) based on your needs.
+
 
 ---
 
